@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+        }
+
+        /* Product Card */
+        .product-card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-title span {
+            font-size: 16px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Grid Section */
+        .grid-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container img {
+            width: 100%;
+            max-width: 120px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-container img:hover {
+            transform: scale(1.05);
+        }
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.product-title span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid Section */
+.grid-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 20px;
+    }
+
+    .product-title span {
+        font-size: 14px;
+    }
+
+    .grid-text {
+        font-size: 16px;
+    }
+
+    .grid-container img {
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .product-title span {
+        font-size: 13px;
+    }
+
+    .grid-container {
+        gap: 10px;
+    }
+
+    .grid-container img {
+        height: 70px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="product-grid">
+    <div class="product-card">
+        <p class="product-title">FDI-006 TIMELESS CLOCK<br><span>Size: 1200x600mm Thickness:40mm</span></p>
+        <img src="./images/image copy 13.png" alt="Product" class="product-image">
+        <div class="grid-text">Available Shades</div>
+        <div class="grid-container">
+            <img src="./images/image copy 14.png"></img>
+            <img src="./images/image copy 15.png"></img>
+            <img src="./images/image copy 16.png"></img>
+            <img src="./images/image copy 17.png"></img>
+            <img src="./images/image copy 18.png"></img>
+            <img src="./images/image copy 19.png"></img>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <p class="product-title">FDI-007 BREAD CRUMB<br><span>Size: 1200x600mm Thickness:50mm</span></p>
+        <img src="./images/image copy 20.png" alt="Product" class="product-image">
+        <div class="grid-text">Available Shades</div>
+
+        <div class="grid-container">
+            <img src="/images/image copy 21.png"></img>
+            <img src="/images/image copy 22.png"></img>
+            <img src="/images/image copy 23.png"></img>
+            <img src="/images/image copy 24.png"></img>
+            <img src="/images/image copy 25.png"></img>
+            <img src="/images/image copy 26.png"></img>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <p class="product-title">FDI-010 FLORENT FRAME<br><span>Size: 1200x600mm Thickness:40mm</span></p>
+        <img src="./images/image copy 41.png" alt="Product" class="product-image">
+        <div class="grid-text">Available Shades</div>
+        <div class="grid-container">
+            <img src="./images/image copy 42.png">
+        </img>
+        <img src="./images/image copy 43.png">
+    </img>
+    <img src="./images/image copy 44.png"></img>
+    <img src="./images/image copy 45.png"></img>
+    <img src="./images/image copy 46.png"></img>
+    <img src="./images/image copy 47.png"></img>
+    </div>
+    </div>
+
+    <div class="product-card">
+        <p class="product-title">FDI-022 FEATHER FORGE<br><span>Size: 900x200mm Thickness:30mm</span></p>
+        <img src="./images/image copy 125.png" alt="Product" class="product-image">
+
+        <div class="grid-container">
+            <img src="./images/image copy 126.png"></img>
+            <img src="./images/image copy 127.png"></img>
+            <img src="./images/image copy 128.png"></img>
+            <img src="./images/image copy 129.png"></img>
+            <img src="./images/image copy 130.png"></img>
+            <img src="./images/image copy 131.png"></img>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

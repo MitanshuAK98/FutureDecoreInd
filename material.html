@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+         body {
+            background-color: white;
+            font-family: system-ui;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+        .feature-box {
+            background-color: #0A7EC2;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .feature-list li::before {
+            content: "●";
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        h2 {
+            color: rgb(10, 171, 224);
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+            gap: 150px;
+            padding: 20px;
+        }
+
+        .image-section img {
+            max-width: 600px;
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        .text-section {
+            max-width: 600px;
+        }
+
+        /* .text-section1 {
+            max-width: 900px;
+            margin-top: 20px;
+        } */
+         @media (max-width: 992px) {
+    .feature-box {
+        flex-direction: column;
+        width: 80%;
+        padding: 15px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 15px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-section {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .feature-list li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .feature-box {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .feature-list li {
+        font-size: 14px;
+    }
+
+    .text-section {
+        font-size: 14px;
+    }
+}
+
+         
+    </style>
+</head>
+<body>
+    <div class="feature-box">
+        <ul class="feature-list">
+            <li>Realistic Appearance</li>
+            <li>Durability</li>
+            <li>Eco-Friendly</li>
+            <li>Ease of Installation</li>
+            <li>Temperature Resilience</li>
+        </ul>
+        <ul class="feature-list">
+            <li>Waterproof</li>
+            <li>Thermal Insulation</li>
+            <li>Versatile Aesthetics</li>
+            <li>Secure Installation</li>
+            <li>Fire Resistance</li>
+        </ul>
+    </div>
+
+    <div class="content-container">
+        <div class="image-section">
+            <img src="./images/a2.png" alt="">
+        </div>
+        <div class="text-section">
+            <h2>Realistic Appearance</h2>
+            <p>Our products are meticulously crafted to mirror the look of natural stone.
+                Through precise molding and specialized finishing techniques, they achieve a lifelike and refined
+                appearance that is virtually indistinguishable from genuine.</p>
+            <h2>Durability</h2>
+            <p>Engineered with high-quality polymer materials and coated with multiple layers of robust finishes,
+                our panels are designed to withstand environmental challenges such as acidity, sunlight, and UV
+                radiation, ensuring an extended lifespan and cost-effectiveness.</p>
+            <h2>Eco-Friendly</h2>
+            <p>Our panels are designed with sustainability in mind, using eco-friendly materials that provide both
+                durability and a minimal environmental footprint.</p>
+            <h2>Ease Of Installation</h2>
+            <p>Designed for user-friendly application, Future Decor Industries panels can be installed on almost any
+                dry, flat indoor surface without requiring specialized skills. Their innovative interlocking design,
+                featuring tongue and groove edges with pre-set seams, allows for straightforward installation using
+                screws
+                or nail guns, significantly reducing project completion time compared to traditional stone products.</p>
+        </div>
+    </div>
+    <div class="text-section1">
+        <h2>Fire Resistance</h2>
+        <p1>Our materials are safe for installation around fireplaces,eliminating concerns about potential wall
+            damage.
+        </p1>
+        <h2>Waterproof</h2>
+        <p1>Our products feature a proprietary coating that provides both waterproof and flame-retardant
+            properties.<br>Crafted primarily from polyurethane(PU) and enhanced with anti-corrison polymers.
+            This lightweight design allows for single person installation without the need for heavy machinery.
+        </p1>
+        <h2>Thermal Insulation</h2>
+        <p1>Our PU stone panels offer excellent thermal insulation , integrating the benefits of external
+            insulation systems.</p1>
+        <h2>Versatile Aesthetics</h2>
+        <p1>Future Decore Industries styles are adaptable to various designs,featuring rich textures and diverse
+            shapes with customization available to meet specific requirements.</p1>
+        <h2>Secure Installation</h2>
+        <p1>Our PU stone panels can be secure;y affixed to walls using prefabricated methods or specialized
+            adhesives ,ensuring a high safety factor.</p1>
+        <h2>Temperature Resilience</h2>
+        <p1>Our products maintain integrity across a wide temperature range form -20 degree Celsius to 120
+            degree Celsius.</p1>
+    </div>
+
+</body>
+</html>

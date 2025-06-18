@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+
+    
+    body{
+        background-color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+    font-size: 36px; /* Bigger and bold */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    max-width: fit-content;
+    color: #000000; /* White text */
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Elegant shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.album .img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.album .img:hover {
+    transform: scale(1.05);
+}
+
+/* Container Layout */
+.album .responsive-container-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.album .responsive-container-block.img-cont {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Larger Images */
+.album .img.img-big {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .album .responsive-container-block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .album .img {
+        max-width: 80%;
+    }
+    .album .img.img-big {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .album .img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .album .img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    .album .img.img-big {
+        width: 100%;
+    }
+}
+/* Additional Responsive Improvements */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        padding: 8px 16px;
+    }
+
+    .album .responsive-container-block.img-cont {
+        gap: 12px;
+    }
+
+    .album .img {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+        padding: 6px 12px;
+        margin: 10px auto;
+    }
+
+    .album .responsive-container-block {
+        padding: 5px;
+    }
+
+    .album .img {
+        box-shadow: none;
+        border-radius: 4px;
+    }
+
+    .album .img.img-big {
+        width: 100%;
+    }
+}
+
+
+   </style>
+</head>
+<body>
+    <h1>"Explore Our Stunning Collection – Where Every Image Tells a Story!"</h1>
+    <div class="album">
+        <div class="responsive-container-block bg">
+          <div class="responsive-container-block img-cont">
+            <img class="img" src="./images/image1.png">
+            <img class="img" src="./images/rockstone.png">
+            <img class="img" src="./images/Mushroom Stone.png">
+            <img class="img" src="./images/pyramid.png">
+            <img class="img" src="./images/image copy 6.png">
+            <img class="img" src="./images/image copy 13.png">
+            <img class="img img-last" src="./images/image copy 20.png">
+
+          </div>
+          <div class="responsive-container-block img-cont">
+            <img class="img img-big" src="./images/image copy 27.png">
+            <img class="img img-big" src="./images/image copy 34.png">
+            <img class="img img-big" src="./images/image copy 41.png">
+            <img class="img img-big" src="./images/image copy 48.png">
+            <img class="img img-big" src="./images/image copy 55.png">
+            <img class="img img-big" src="./images/image copy 62.png">
+            <img class="img img-big" src="./images/image copy 69.png">
+          </div>
+          <div class="responsive-container-block img-cont">
+            <img class="img" src="./images/image copy 83.png">
+            <img class="img" src="./images/image copy 90.png">
+            <img class="img" src="./images/image copy 97.png">
+            <img class="img" src="./images/image copy 104.png">
+            <img class="img" src="./images/image copy 111.png">
+            <img class="img" src="./images/image copy 118.png">
+            <img class="img" src="./images/image copy 125.png">
+
+          </div>
+        </div>
+      </div>
+</body>
+</html>

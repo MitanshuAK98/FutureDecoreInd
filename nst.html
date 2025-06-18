@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+        }
+
+        /* Product Card */
+        .product-card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-title span {
+            font-size: 16px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Grid Section */
+        .grid-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container img {
+            width: 100%;
+            max-width: 120px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-container img:hover {
+            transform: scale(1.05);
+        }
+        /* Responsive styles for tablets and mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .product-grid {
+        gap: 20px;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .product-title span {
+        font-size: 14px;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+
+    .grid-text {
+        font-size: 16px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .grid-container img {
+        max-width: 100px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-title {
+        font-size: 16px;
+    }
+
+    .product-title span {
+        font-size: 13px;
+    }
+
+    .grid-text {
+        font-size: 14px;
+    }
+
+    .grid-container img {
+        max-width: 80px;
+        height: 60px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <p class="product-title">FDI-001 ROCKY MOUNTAIN<br> 
+                <span>Size: 1200x600mm | Thickness: 100mm</span>
+            </p>
+            <img src="./images/image1.png" alt="Product Image" class="product-image">
+            <div class="grid-text">Available Shades</div>
+            <div class="grid-container">
+                <img src="./images/grey1.png" alt="Grey Shade">
+                <img src="./images/golden1.png" alt="Golden Shade">
+                <img src="./images/red1.png" alt="Red Shade">
+                <img src="./images/black1.png" alt="Black Shade">
+                <img src="./images/darkgrey.png" alt="Dark Grey Shade">
+                <img src="./images/white1.png" alt="White Shade">
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <p class="product-title">FDI-002 ROCK STONE<br> 
+                <span>Size: 1200x600mm | Thickness: 100mm</span>
+            </p>
+            <img src="./images/rockstone.png" alt="Product" class="product-image">
+            <div class="grid-text">Available Shades</div>
+            <div class="grid-container">
+                <img src="./images/dg2.png" alt="Shade 1">
+                <img src="./images/golden2.png" alt="Shade 2">
+                <img src="./images/red2.png" alt="Shade 3">
+                <img src="./images/black2.png" alt="Shade 4">
+                <img src="./images/dgg2.png" alt="Shade 5">
+                <img src="/images/w2.png" alt="Shade 6">
+            </div>
+        </div>
+
+        <div class="product-card">
+           <p class="product-title">FDI-003 MUSHROOM STONE<br>
+            <span>Size: 1200x500mm Thickness:100mm</span></p>
+            <img src="./images/Mushroom Stone.png" alt="Product" class="product-image">
+        
+        <div class="grid-text">Available Shades</div>
+        <div class="grid-container">
+            <img src="./images/lg3.png"></img>
+            <img src="./images/g3.png"></img>
+            <img src="./images/r3.png"></img>
+            <img src="./images/b3.png"></img>
+            <img src="./images/g.png"></img>
+            <img src="./images/w4.png"></img>
+        </div></div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <p class="product-title">FDI-009 NATURAL STONE<br> 
+                <span>Size: 1200x600mm | Thickness: 45mm</span>
+            </p>
+            <img src="./images/image copy 34.png" alt="Product" class="product-image">
+            <div class="grid-text">Available Shades</div>
+            <div class="grid-container">
+                <img src="./images/image copy 35.png">
+                <img src="./images/image copy 36.png">
+                <img src="./images/image copy 37.png">
+                <img src="./images/image copy 38.png">
+                <img src="./images/image copy 39.png">
+                <img src="./images/image copy 40.png">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border: 2px solid #ddd;
+            padding: 15px;
+            transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
+            opacity: 0;
+            animation: fadeInSlide 1s ease-in-out forwards;
+        }
+
+        .rotate {
+            animation: rotate 2s ease-in-out infinite;
+            /* Added rotation */
+        }
+
+        .color-options {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            cursor: pointer;
+            border: 3px solid #fff;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-box:hover {
+            transform: scale(1.2);
+            border-color: #333;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-description">
+        Transform your interiors with our high-quality wall panels, crafted for style, durability, and a touch of
+        luxury.
+    </div>
+
+
+    <!-- Product 1 -->
+    <div class="product-container">
+        <p class="product-title">FDI-001 ROCKEY MOUNTAIN<br><span>Size: 1200x600mm Thickness:100mm</span></p>
+        <img id="productImage1" src="./images/image1.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/grey1.png','productImage1')"></div>
+        <div class="color-box" style="background:gold;" onclick="changeImage('./images/golden1.png','productImage1')">
+        </div>
+        <div class="color-box" style="background:red;" onclick="changeImage('./images/red1.png','productImage1')"></div>
+        <div class="color-box" style="background:black;" onclick="changeImage('./images/black1.png','productImage1')">
+        </div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/darkgrey.png','productImage1')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/white1.png','productImage1')"></div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-container">
+        <p class="product-title">FDI-002 ROCK STONE<br><span>Size: 1200x600mm Thickness:100mm</span></p>
+        <img id="productImage2" src="./images/rockstone.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;" onclick="changeImage('./images/dg2.png','productImage2')">
+        </div>
+        <div class="color-box" style="background:gold;" onclick="changeImage('./images/golden2.png','productImage2')">
+        </div>
+        <div class="color-box" style="background:red;" onclick="changeImage('./images/red2.png','productImage2')"></div>
+        <div class="color-box" style="background:black;" onclick="changeImage('./images/black2.png','productImage2')">
+        </div>
+        <div class="color-box" style="background:darkgrey;" onclick="changeImage('./images/dgg2.png','productImage2')">
+        </div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/w2.png','productImage2')"></div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-container">
+        <p class="product-title">FDI-003 MUSHROOM STONE<br><span>Size: 1200x500mm Thickness:100mm</span></p>
+        <img id="productImage3" src="./images/Mushroom Stone.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;" onclick="changeImage('./images/lg3.png','productImage3')">
+        </div>
+        <div class="color-box" style="background:gold;" onclick="changeImage('./images/g3.png','productImage3')"></div>
+        <div class="color-box" style="background:red;" onclick="changeImage('./images/r3.png','productImage3')"></div>
+        <div class="color-box" style="background:black;" onclick="changeImage('./images/b3.png','productImage3')"></div>
+        <div class="color-box" style="background:darkgrey;" onclick="changeImage('./images/g.png','productImage3')">
+        </div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/w4.png','productImage3')"></div>
+    </div>
+
+    <div class="product-container">
+        <p class="product-title">FDI-004 EGYPTIAN PYRAMID<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+        <img id="productImage4" src="./images/pyramid.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image.png','productImage4')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy.png','productImage4')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 2.png','productImage4')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 3.png','productImage4')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 4.png','productImage4')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 5.png','productImage4')"></div>
+    </div>
+
+    <div class="product-container">
+        <p class="product-title">FDI-005 OCEAN WAVE<br><span>Size: 1200x600mm Thickness:30mm</span></p>
+        <img id="productImage5" src="./images/image copy 6.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 7.png','productImage5')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 8.png','productImage5')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 9.png','productImage5')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 10.png','productImage5')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 11.png','productImage5')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 12.png','productImage5')"></div>
+    </div>
+
+    <div class="product-container">
+        <p class="product-title">FDI-006 TIMELESS CLOCK<br><span>Size: 1200x600mm Thickness:40mm</span></p>
+        <img id="productImage6" src="./images/image copy 13.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 14 .png','productImage6')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 15 .png','productImage6')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 16 .png','productImage6')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 17.png','productImage6')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 18.png','productImage6')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 19.png','productImage6')"></div>
+    </div>
+
+    <div class="product-container">
+        <p class="product-title">FDI-007 BREAD CRUMB<br><span>Size: 1200x600mm Thickness:50mm</span></p>
+        <img id="productImage7" src="./images/image copy 20.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 21.png','productImage7')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 22.png','productImage7')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 23.png','productImage7')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 24.png','productImage7')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 25.png','productImage7')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 26.png','productImage7')"></div>
+    </div>
+
+    <div class="product-container">
+        <p class="product-title">FDI-008 WOOD RING<br><span>Size: 1200x600mm Thickness:25mm</span></p>
+        <img id="productImage8" src="./images/image copy 27.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 28.png','productImage8')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 29.png','productImage8')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 30.png','productImage8')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 31.png','productImage8')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 32.png','productImage8')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 33.png','productImage8')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-009 NATURAL STONE<br><span>Size: 1200x600mm Thickness:45mm</span></p>
+        <img id="productImage9" src="./images/image copy 34.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 35.png','productImage9')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 36.png','productImage9')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 37.png','productImage9')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 38.png','productImage9')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 39.png','productImage9')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 40.png','productImage9')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-010 FLORENT FRAME<br><span>Size: 1200x600mm Thickness:40mm</span></p>
+        <img id="productImage10" src="./images/image copy 41.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 42.png','productImage10')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 43.png','productImage10')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 44.png','productImage10')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 45.png','productImage10')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 46.png','productImage10')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 47.png','productImage10')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-011 TEXTURE CURRENT<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+        <img id="productImage11" src="./images/image copy 48.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 49.png','productImage11')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 50.png','productImage11')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 51.png','productImage11')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 52.png','productImage11')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 53.png','productImage11')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 54.png','productImage11')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-012 WATER WAVE<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+        <img id="productImage12" src="./images/image copy 55.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 56.png','productImage12')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 57.png','productImage12')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 58.png','productImage12')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 59.png','productImage12')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 60.png','productImage12')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 61.png','productImage12')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-013 OVAL OASIS<br><span>Size: 1200x600mm Thickness:45mm</span></p>
+        <img id="productImage13" src="./images/image copy 62.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 63.png','productImage13')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 64.png','productImage13')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 65.png','productImage13')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 66.png','productImage13')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 67.png','productImage13')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 68.png','productImage13')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-014 HERRINGBONE HEAVEN<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+        <img id="productImage14" src="./images/image copy 69.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 70.png','productImage14')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 71.png','productImage14')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 72.png','productImage14')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 73.png','productImage14')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 74.png','productImage14')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 75.png','productImage14')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-015 INDUSTRIAL BRICKWALL<br><span>Size: 1200x300mm Thickness:30mm</span></p>
+        <img id="productImage15" src="./images/image copy 76.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 77.png','productImage15')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 78.png','productImage15')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 79.png','productImage15')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 80.png','productImage15')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 81.png','productImage15')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 82.png','productImage15')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-016 VINTAGE BRICKWALL<br><span>Size: 1200x300mm Thickness:35mm</span></p>
+        <img id="productImage16" src="./images/image copy 83.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 84.png','productImage16')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 85.png','productImage16')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 86.png','productImage16')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 87.png','productImage16')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 88.png','productImage16')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 89.png','productImage16')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-017 THREE LAYERED HOLO SQUARE<br><span>Size: 600x600mm Thickness:70mm</span></p>
+        <img id="productImage17" src="./images/image copy 90.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 91.png','productImage17')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 92.png','productImage17')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 93.png','productImage17')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 94.png','productImage17')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 95.png','productImage17')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 96.png','productImage17')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-018 THREE LAYERED HOLO PYRAMID<br><span>Size: 600x600mm Thickness:65mm</span></p>
+        <img id="productImage18" src="./images/image copy 97.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 98.png','productImage18')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 99.png','productImage18')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 100.png','productImage18')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 101.png','productImage18')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 102.png','productImage18')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 103.png','productImage18')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-019 THREE LAYERED HOLO SLIDING<br><span>Size: 600x600mm Thickness:60mm</span></p>
+        <img id="productImage19" src="./images/image copy 104.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 105.png','productImage19')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 106.png','productImage19')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 107.png','productImage19')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 108.png','productImage19')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 109.png','productImage19')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 110.png','productImage19')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-020 FLUTED TRIANGULAR GRAIN STRIP<br><span>Size: 600x600mm Thickness:30mm</span>
+        </p>
+        <img id="productImage20" src="./images/image copy 111.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 112.png','productImage20')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 113.png','productImage20')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 114.png','productImage20')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 115.png','productImage20')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 116.png','productImage20')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 117.png','productImage20')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-021 FLUTED GRAIN STRIP<br><span>Size: 600x600mm Thickness:30mm</span></p>
+        <img id="productImage21" src="./images/image copy 118.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 119.png','productImage21')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 120.png','productImage21')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 121.png','productImage21')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 122.png','productImage21')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 123.png','productImage21')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 124.png','productImage21')"></div>
+    </div>
+    <div class="product-container">
+        <p class="product-title">FDI-022 FEATHER FORGE<br><span>Size: 900x200mm Thickness:30mm</span></p>
+        <img id="productImage22" src="./images/image copy 125.png" alt="Product" class="product-image">
+    </div>
+    <div class="color-options">
+        <div class="color-box" style="background:lightgrey;"
+            onclick="changeImage('./images/image copy 126.png','productImage22')"></div>
+        <div class="color-box" style="background:gold;"
+            onclick="changeImage('./images/image copy 127.png','productImage22')"></div>
+        <div class="color-box" style="background:red;"
+            onclick="changeImage('./images/image copy 128.png','productImage22')"></div>
+        <div class="color-box" style="background:black;"
+            onclick="changeImage('./images/image copy 129.png','productImage22')"></div>
+        <div class="color-box" style="background:darkgrey;"
+            onclick="changeImage('./images/image copy 130.png','productImage22')"></div>
+        <div class="color-box" style="background:white; border: 1px solid #ddd;"
+            onclick="changeImage('./images/image copy 131.png','productImage22')"></div>
+    </div>
+
+    <script>
+        function changeImage(imagePath, productId) {
+            const productImage = document.getElementById(productId);
+            if (productImage) {
+                productImage.style.opacity = "0"; // Fade-out effect
+                setTimeout(() => {
+                    productImage.src = imagePath;
+                    productImage.style.maxWidth = "200px"; // Maintain original size
+                    productImage.style.opacity = "1"; // Fade-in effect
+                }, 200);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

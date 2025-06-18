@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    /* Main Container */
+    .new_home_web {
+      width: 100%;
+      padding: 50px 0;
+      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+    }
+
+    .imgBG {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: 45%;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .responsive-container-block {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .textContainer {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .heading {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .orangeText {
+      color: #1976D2;
+    }
+
+    .orangeLine {
+      width: 60px;
+      height: 4px;
+      background: #1976D2;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .subHeading {
+      color: #666;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .input,
+    .textinput {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .input:focus,
+    .textinput:focus {
+      border-color: #1976D2;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.2);
+    }
+
+    .send {
+      background-color: #1976D2;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .send:hover {
+      background-color: #1976D2;
+    }
+
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .imgBG {
+        display: none;
+      }
+
+      .form-box {
+        padding: 20px;
+      }
+
+      .heading {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="new_home_web">
+    <div class="responsive-container-block big-container">
+      <img class="imgBG" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw65.png">
+      <div class="responsive-container-block textContainer">
+        <div class="topHead">
+          <p class="text-blk heading">
+            Get in
+            <span class="orangeText">touch</span>
+          </p>
+          <div class="orangeLine"></div>
+        </div>
+        <p class="text-blk subHeading">
+          We'd love to hear from you! Fill out the form below and we’ll get back to you soon.
+        </p>
+      </div>
+
+      <div class="responsive-container-block container">
+        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line">
+          <form id="contact-form" class="form-box">
+            <div class="container-block form-wrapper">
+              <div class="responsive-container-block">
+                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+                  <p>Full Name</p>
+                  <input class="input" type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+                  <p>Email</p>
+                  <input class="input" type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+                  <p>Message</p>
+                  <textarea class="textinput" id="message" name="message" rows="5"
+                    placeholder="Write your message here..." required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="send">Submit</button>
+              <p id="status" style="display:none;"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const statusText = document.getElementById("status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const contactData = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        message: document.getElementById("message").value.trim(),
+      };
+
+      statusText.textContent = "Sending...";
+
+      try {
+        const res = await fetch("http://localhost:5000/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(contactData)
+        });
+
+        const result = await res.json();
+        if (res.ok) {
+          statusText.textContent = result.message;
+          form.reset(); // clear form on success
+        } else {
+          statusText.textContent = "❌ " + result.message;
+        }
+      } catch (error) {
+        statusText.textContent = "❌ Failed to send message.";
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+
+</html>

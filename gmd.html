@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     /* General Reset */
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+        }
+
+        /* Product Card */
+        .product-card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-title span {
+            font-size: 16px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Grid Section */
+        .grid-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container img {
+            width: 100%;
+            max-width: 120px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-container img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .product-title span {
+        font-size: 14px;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 8px;
+        padding: 5px;
+    }
+
+    .grid-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grid-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-title {
+        font-size: 16px;
+    }
+
+    .product-title span {
+        font-size: 12px;
+    }
+
+    .grid-text {
+        font-size: 14px;
+    }
+
+    .product-card {
+        box-shadow: none;
+        border: none;
+        padding: 8px;
+    }
+}
+
+   </style>
+</head>
+<body>
+    <div class="product-grid">
+    <div class="product-card">
+        <p class="product-title">FDI-017 THREE LAYERED HOLO SQUARE<br><span>Size: 600x600mm Thickness:70mm</span></p>
+        <img src="./images/image copy 90.png" alt="Product" class="product-image">
+        <div class="grid-text">Available Shades</div>
+    <div class="grid-container">
+        <img src ="./images/image copy 91.png"></img>
+        <img src="./images/image copy 92.png"></img>
+        <img src="./images/image copy 93.png"></img>
+        <img src="./images/image copy 94.png"></img>
+        <img src="./images/image copy 95.png"></img>
+        <img src="./images/image copy 96.png"></img>
+    </div></div>
+
+    <div class="product-card">
+        <p class="product-title">FDI-018 THREE LAYERED HOLO PYRAMID<br><span>Size: 600x600mm Thickness:65mm</span></p>
+        <img src="./images/image copy 97.png" alt="Product" class="product-image">
+    <div class="grid-text">Available Shades</div>
+    <div class="grid-container">
+        <img src='./images/image copy 98.png'></img>
+        <img src='./images/image copy 99.png'></img>
+        <img src='./images/image copy 100.png'></img>
+        <img src='./images/image copy 101.png'></img>
+        <img src='./images/image copy 102.png'></img>
+        <img src='./images/image copy 103.png'></img>
+    </div></div>
+
+    <div class="product-card">
+        <p class="product-title">FDI-019 THREE LAYERED HOLO SLIDING<br><span>Size: 600x600mm Thickness:60mm</span></p>
+        <img src="./images/image copy 104.png" alt="Product" class="product-image">
+    <div class="grid-text">Available Shades</div>
+    <div class="grid-container">
+        <img src='./images/image copy 105.png'></img>
+        <img src='./images/image copy 106.png'></img>
+        <img src='./images/image copy 107.png'></img>
+        <img src='./images/image copy 108.png'></img>
+        <img src='./images/image copy 109.png'></img>
+        <img src='./images/image copy 110.png'></img>
+    </div></div>
+</div>
+</body>
+</html>

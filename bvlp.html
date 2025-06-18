@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURAL STONE PANELS</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.product-title span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+/* Grid Text */
+.grid-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+    padding: 10px 20px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.grid-container img {
+    width: 100%;
+    max-width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 20px;
+    }
+
+    .grid-text {
+        font-size: 18px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 8px;
+    }
+
+    .grid-text {
+        font-size: 16px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <p class="product-title">FDI-015 INDUSTRIAL BRICKWALL<br><span>Size: 1200x300mm Thickness:30mm</span></p>
+            <img src="./images/image copy 76.png" alt="Product" class="product-image">
+            <div class="grid-text">Available Shades</div>
+            <div class="grid-container">
+                <img src="./images/image copy 77.png">
+                <img src="./images/image copy 78.png">
+                <img src="./images/image copy 79.png">
+                <img src="./images/image copy 80.png">
+            <img src="./images/image copy 81.png">
+        <img src="./images/image copy 82.png">
+    </div>
+    </div>
+    <div class="product-card">
+        <p class="product-title">FDI-016 VINTAGE BRICKWALL<br><span>Size: 1200x300mm Thickness:35mm</span></p>
+        <img src="./images/image copy 83.png" alt="Product" class="product-image">
+        <div class="grid-text">Available Shades</div>
+
+        <div class="grid-container">
+            <img src="./images/image copy 84.png"></img>
+            <img src="./images/image copy 85.png"></img>
+            <img src="./images/image copy 86.png"></img>
+            <img src="./images/image copy 87.png"></img>
+            <img src="./images/image copy 88.png"></img>
+            <img src="./images/image copy 89.png"></img>
+        </div>
+    </div>
+</body>
+
+</html>

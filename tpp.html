@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+        }
+
+        /* Product Card */
+        .product-card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-title span {
+            font-size: 16px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+            @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 18px;
+        }
+
+        .product-title span {
+            font-size: 14px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .grid-text {
+            font-size: 16px;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-container img {
+            max-width: 100px;
+            height: 80px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-title {
+            font-size: 16px;
+        }
+
+        .product-title span {
+            font-size: 12px;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+        }
+
+        .grid-container img {
+            max-width: 80px;
+            height: 60px;
+        }
+    }
+
+        /* Grid Section */
+        .grid-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container img {
+            width: 100%;
+            max-width: 120px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .grid-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <p class="product-title">FDI-004 EGYPTIAN PYRAMID<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+            <img src="./images/pyramid.png" alt="Product" class="product-image">
+            <div class="grid-text">Available Shades</div>
+            <div class="grid-container">
+                <img src="./images/image.png"></img>
+                <img src="./images/image copy.png"></img>
+                <img src='./images/image copy 2.png'></img>
+                    <img src='./images/image copy 3.png'></img>
+                        <img src='./images/image copy 4.png'></img>
+                        <img src='./images/image copy 5.png'></img>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <p class="product-title">FDI-005 OCEAN WAVE<br><span>Size: 1200x600mm Thickness:30mm</span></p>
+                    <img src="./images/image copy 6.png" alt="Product" class="product-image">
+                    <div class="grid-text">Available Shades</div>
+                    <div class="grid-container">
+                        <img src='./images/image copy 7.png'></img>
+                        <img src='./images/image copy 8.png'></img>
+                        <img src='./images/image copy 9.png'></img>
+                        <img src='./images/image copy 10.png'></img>
+                        <img src='./images/image copy 11.png'></img>
+                        <img src='./images/image copy 12.png'></img>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <p class="product-title">FDI-011 TEXTURE CURRENT<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+                    <img src="./images/image copy 48.png" alt="Product" class="product-image">
+                    <div class="grid-text">Available Shades</div>
+                    <div class="grid-container">
+                        <img src='./images/image copy 49.png'></img>
+                        <img src='./images/image copy 50.png'></img>
+                        <img src='./images/image copy 51.png'></img>
+                        <img src='./images/image copy 52.png'></img>
+                        <img src='./images/image copy 53.png'></img>
+                        <img src='./images/image copy 54.png'></img>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <p class="product-title">FDI-012 WATER WAVE<br><span>Size: 1200x600mm Thickness:35mm</span></p>
+                    <img id="productImage12" src="./images/image copy 55.png" alt="Product" class="product-image">
+                    <div class="grid-text">Available Shades</div>
+
+                    <div class="grid-container">
+                        <img src='./images/image copy 56.png'></img>
+                        <img src='./images/image copy 57.png'></img>
+                        <img src='./images/image copy 58.png'></img>
+                        <img src='./images/image copy 59.png'></img>
+                        <img src='./images/image copy 60.png'></img>
+                        <img src='./images/image copy 61.png'></img>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <p class="product-title">FDI-014 HERRINGBONE HEAVEN<br><span>Size: 1200x600mm Thickness:35mm</span>
+                    </p>
+                    <img src="./images/image copy 69.png" alt="Product" class="product-image">
+                    <div class="grid-text">Available Shades</div>
+
+                    <div class="grid-container">
+                        <img src='./images/image copy 70.png'></img>
+                        <img src='./images/image copy 71.png'></img>
+                        <img src='./images/image copy 72.png'></img>
+                        <img src='./images/image copy 73.png'></img>
+                        <img src='./images/image copy 74.png'></img>
+                        <img src='./images/image copy 75.png'></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+
+</html>
